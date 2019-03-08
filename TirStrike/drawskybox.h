@@ -19,17 +19,23 @@ public:
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid *)0);
 		glBindVertexArray(0);
 
-		// Load textures
-		cubeTexture = TextureLoading::LoadTexture("res/wood.jpg");
+
 
 		// Cubemap (Skybox)
 
 		faces.push_back("res/skybox/sky/right.tga");
 		faces.push_back("res/skybox/sky/left.tga");
-		faces.push_back("res/skybox/sky/top.tga");
-		faces.push_back("res/skybox/sky/bottom.tga");
+		faces.push_back("res/skybox/sky/up.tga");
+		faces.push_back("res/skybox/sky/down.tga");
 		faces.push_back("res/skybox/sky/back.tga");
 		faces.push_back("res/skybox/sky/front.tga");
+
+		/*faces.push_back("res/skybox/mystic/right.tga");
+		faces.push_back("res/skybox/mystic/left.tga");
+		faces.push_back("res/skybox/mystic/up.tga");
+		faces.push_back("res/skybox/mystic/down.tga");
+		faces.push_back("res/skybox/mystic/back.tga");
+		faces.push_back("res/skybox/mystic/front.tga");*/
 		cubemapTexture = TextureLoading::LoadCubemap(faces);
 	}
 	GLfloat skyboxVertices[150] = {
@@ -62,20 +68,25 @@ public:
 		1.0f, -1.0f,  1.0f,
 		-1.0f, -1.0f,  1.0f,
 
+		/*-1.0f,  1.0f, -1.0f,
+		1.0f,  1.0f, -1.0f,
+		1.0f,  1.0f,  1.0f,
+		1.0f,  1.0f,  1.0f,
+		-1.0f,  1.0f,  1.0f,
+		-1.0f,  1.0f, -1.0f,*/
 		-1.0f,  1.0f, -1.0f,
 		1.0f,  1.0f, -1.0f,
 		1.0f,  1.0f,  1.0f,
 		1.0f,  1.0f,  1.0f,
 		-1.0f,  1.0f,  1.0f,
 		-1.0f,  1.0f, -1.0f,
-
 		-1.0f, -1.0f, -1.0f,
 		-1.0f, -1.0f,  1.0f,
 		1.0f, -1.0f, -1.0f,
 		1.0f, -1.0f, -1.0f,
 		-1.0f, -1.0f,  1.0f,
 		1.0f, -1.0f,  1.0f
-	};;
+	};
 	GLuint skyboxVAO=0, skyboxVBO=0;
 	GLuint cubeTexture;
 	std::vector<const GLchar*> faces;

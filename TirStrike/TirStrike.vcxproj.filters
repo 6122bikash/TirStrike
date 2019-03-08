@@ -38,5 +38,59 @@
     <ClInclude Include="Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.fs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gunloading.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gunLoading.vs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lamp.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lamp.vs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lighting.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lighting.vs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="modelLoading.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="modelLoading.vs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="skybox.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="skybox.vs">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\skybox\sky\up.tga">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="target.vs">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="target.frag">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
